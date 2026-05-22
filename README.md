@@ -47,7 +47,6 @@ A aplicação identifica duplicidades aplicando os seguintes filtros sequenciais
 | 005I8O744 | Ragu T |
 | 003MNS744 | D Reddy |
 | 06225W744 | Sujinraja R |
-| 09630C631 | Sergio Watanabe |
 
 ## 📊 Estrutura do Excel
 

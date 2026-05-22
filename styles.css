@@ -289,4 +289,52 @@ header h1 {
     }
 }
 
+/* Footer Styles */
+.app-footer {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 30px;
+    text-align: center;
+    border-top: 3px solid #5568d3;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-logo {
+    height: 40px;
+    width: auto;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+}
+
+.footer-text {
+    color: white;
+    font-size: 0.95rem;
+    margin: 0;
+    opacity: 0.95;
+}
+
+.footer-text strong {
+    font-weight: 600;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .app-footer {
+        padding: 20px;
+    }
+    
+    .footer-logo {
+        height: 30px;
+    }
+    
+    .footer-text {
+        font-size: 0.85rem;
+    }
+}
+
 /* Made with Bob */

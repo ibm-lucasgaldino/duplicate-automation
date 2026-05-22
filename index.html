@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Dupe Check SW - IR and SaaS</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- SheetJS Library for Excel Processing -->
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Auto Dupe Check SW - IR and SaaS</h1>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab(event, 'dupeIR')">Dupe IR</button>
+            <button class="tab-button" onclick="openTab(event, 'dupeSaaS')">Dupe SaaS</button>
+        </div>
+
+        <div id="dupeIR" class="tab-content active">
+            <div class="upload-section">
+                <h2>Dupe IR</h2>
+                <p>Por favor, anexe o report QMF IR em formato Excel:</p>
+                
+                <div class="file-upload-wrapper">
+                    <input type="file" id="irFileInput" accept=".xlsx,.xls" onchange="handleIRFileUpload(event)">
+                    <label for="irFileInput" class="file-upload-label">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="17 8 12 3 7 8"></polyline>
+                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                        </svg>
+                        <span>Clique para selecionar o arquivo Excel</span>
+                    </label>
+                </div>
+
+                <div id="irFileInfo" class="file-info" style="display: none;">
+                    <div class="file-details">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                        </svg>
+                        <div class="file-text">
+                            <strong id="irFileName"></strong>
+                            <span id="irFileSize"></span>
+                        </div>
+                        <button onclick="clearIRFile()" class="clear-button">✕</button>
+                    </div>
+                </div>
+
+                <div id="irProcessing" class="processing-section" style="display: none;">
+                    <div class="spinner"></div>
+                    <p>Processando arquivo...</p>
+                </div>
+
+                <div id="irResults" class="results-section" style="display: none;">
+                    <h3>Resultados</h3>
+                    <div id="irResultsContent"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="dupeSaaS" class="tab-content">
+            <div class="upload-section">
+                <h2>Dupe SaaS</h2>
+                <p class="placeholder-text">Funcionalidade em desenvolvimento. Aguardando instruções...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

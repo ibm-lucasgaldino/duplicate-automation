@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.tabs {
+    display: flex;
+    background: #f8f9fa;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.tab-button {
+    flex: 1;
+    padding: 18px 30px;
+    background: transparent;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #6c757d;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.tab-button:hover {
+    background: #e9ecef;
+    color: #495057;
+}
+
+.tab-button.active {
+    color: #667eea;
+    background: white;
+}
+
+.tab-button.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.tab-content {
+    display: none;
+    padding: 40px;
+    animation: fadeIn 0.3s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.upload-section h2 {
+    color: #2d3748;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+.upload-section p {
+    color: #718096;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.file-upload-wrapper {
+    margin: 30px 0;
+}
+
+.file-upload-wrapper input[type="file"] {
+    display: none;
+}
+
+.file-upload-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 40px;
+    border: 3px dashed #cbd5e0;
+    border-radius: 12px;
+    background: #f7fafc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.file-upload-label:hover {
+    border-color: #667eea;
+    background: #edf2f7;
+}
+
+.file-upload-label svg {
+    color: #667eea;
+    margin-bottom: 15px;
+}
+
+.file-upload-label span {
+    color: #4a5568;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.file-info {
+    margin: 20px 0;
+    padding: 20px;
+    background: #f0fdf4;
+    border: 2px solid #86efac;
+    border-radius: 8px;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.file-details {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.file-details svg {
+    color: #22c55e;
+    flex-shrink: 0;
+}
+
+.file-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.file-text strong {
+    color: #166534;
+    font-size: 1rem;
+}
+
+.file-text span {
+    color: #15803d;
+    font-size: 0.9rem;
+}
+
+.clear-button {
+    background: #ef4444;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.clear-button:hover {
+    background: #dc2626;
+    transform: scale(1.1);
+}
+
+.processing-section {
+    text-align: center;
+    padding: 40px;
+    background: #eff6ff;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #e0e7ff;
+    border-top-color: #667eea;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.processing-section p {
+    color: #3730a3;
+    font-weight: 500;
+    margin: 0;
+}
+
+.results-section {
+    margin-top: 30px;
+    padding: 30px;
+    background: #f8fafc;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+.results-section h3 {
+    color: #2d3748;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.placeholder-text {
+    text-align: center;
+    color: #a0aec0;
+    font-style: italic;
+    padding: 60px 20px;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .tab-button {
+        padding: 15px 20px;
+        font-size: 1rem;
+    }
+
+    .tab-content {
+        padding: 20px;
+    }
+
+    .upload-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .file-upload-label {
+        padding: 40px 20px;
+    }
+}
+
+/* Made with Bob */

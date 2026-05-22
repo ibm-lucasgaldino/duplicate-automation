@@ -33,8 +33,7 @@ const creatorMapping = {
     '09029U744': 'Hamsa',
     '005I8O744': 'Ragu T',
     '003MNS744': 'D Reddy',
-    '06225W744': 'Sujinraja R',
-    '09630C631': 'Sergio Watanabe'
+    '06225W744': 'Sujinraja R'
 };
 
 // Allowed Creator IDs
